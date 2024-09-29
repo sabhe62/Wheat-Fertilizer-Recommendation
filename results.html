@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Wheat Fertilizer Recommendations</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+    <header>
+        <button id="menuButton" aria-label="Menu">☰</button>
+        <h1>Fertilizer Recommendations</h1>
+    </header>
+
+    <nav id="sideMenu">
+        <h2>Plant</h2>
+        <ul>
+            <li><button class="plant-button">Wheat</button></li>
+            <li><button class="plant-button" disabled>Corn</button></li>
+            <li><button class="plant-button" disabled>Other</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="recommendationResults"></div>
+        <a href="fertilizer-calendar.html" class="button">View Fertilizer Calendar</a>
+        <button id="startOver">Start Over</button>
+    </main>
+
+    <script src="app.js"></script>
+    <nav class="tab-bar">
+        <a href="index.html" class="tab-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="fertilizer.html" class="tab-item">
+            <i class="fas fa-flask"></i>
+            <span>Fertilizer</span>
+        </a>
+        <a href="results.html" class="tab-item">
+            <i class="fas fa-chart-bar"></i>
+            <span>Results</span>
+        </a>
+    </nav>
+</body>
+</html>

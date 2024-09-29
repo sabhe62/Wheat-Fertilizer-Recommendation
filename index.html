@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheat Fertilizer Recommendations</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <button id="menuButton" aria-label="Menu">☰</button>
+        <h1>Wheat Fertilizer Recommendations</h1>
+    </header>
+
+    <nav id="sideMenu">
+        <h2>Plant</h2>
+        <ul>
+            <li><button class="plant-button">Wheat</button></li>
+            <li><button class="plant-button" disabled>Corn</button></li>
+            <li><button class="plant-button" disabled>Other</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="inputForm">
+            <label for="climate">Climate:</label>
+            <select id="climate" required>
+                <option value="">Select climate</option>
+                <option value="hot_humid">Hot and Humid</option>
+                <option value="hot_dry">Hot and Dry</option>
+                <option value="Temperate">Moderate</option>
+                <option value="Cold">Cold</option>
+            </select>
+
+            <label for="yield">Yields (tons per hectare):</label>
+            <select id="yield" required>
+                <option value="">Select yield</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">More than 7</option>
+            </select>
+
+            <label for="organicCarbon">Soil Organic Carbon (%):</label>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" id="organicCarbon" name="organicCarbon" step="0.01" required>
+
+            <label for="phosphorus">Soil Phosphorus (P2O5) (mg/kg):</label>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" id="phosphorus" name="phosphorus" step="0.1" required>
+
+            <label for="potassium">Soil Potassium (K2O) (mg/kg):</label>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" id="potassium" name="potassium" step="0.1" required>
+
+            <button type="submit">Next</button>
+            <button type="reset">Start Over</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+    <nav class="tab-bar">
+        <a href="index.html" class="tab-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="fertilizer.html" class="tab-item">
+            <i class="fas fa-flask"></i>
+            <span>Fertilizer</span>
+        </a>
+        <a href="results.html" class="tab-item">
+            <i class="fas fa-chart-bar"></i>
+            <span>Results</span>
+        </a>
+    </nav>
+</body>
+</html>

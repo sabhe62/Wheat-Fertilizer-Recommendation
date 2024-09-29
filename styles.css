@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+#menuButton {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#sideMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 33%;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#sideMenu.open {
+    left: 0;
+}
+
+#sideMenu h2 {
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 1rem;
+}
+
+#sideMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sideMenu li {
+    padding: 0.5rem 1rem;
+}
+
+.plant-button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.plant-button:disabled {
+    color: #999;
+    cursor: not-allowed;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+select, input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Updated Start Over button styles */
+#startOver, .start-over {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#startOver:hover, .start-over:hover {
+    background-color: #ff5252;
+}
+
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button[type="reset"] {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #ff5252;
+}
+
+select[multiple] {
+    height: auto;
+    min-height: 100px;
+}
+
+#nitrogenPercentages,
+#phosphorusPercentages,
+#potassiumPercentages {
+    margin-top: 0.5rem;
+}
+
+#nitrogenPercentages label,
+#phosphorusPercentages label,
+#potassiumPercentages label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+#nitrogenPercentages input,
+#phosphorusPercentages input,
+#potassiumPercentages input {
+    width: 60px;
+    margin-left: 0.5rem;
+}
+
+#results {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#results h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#recommendationResults h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#recommendationResults p {
+    margin: 0.5rem 0;
+}
+
+#fertilizationCalendar {
+    background-color: #f0f0f0;
+}
+
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.tab-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.tab-item span {
+    font-size: 12px;
+}
+
+.tab-item.active {
+    color: #4CAF50;
+}
+
+main {
+    padding-bottom: 70px;
+}
+
+/* Style number inputs */
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield; /* Standard syntax */
+    margin: 0; /* Remove default margin */
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Styles for the calendar page */
+.calendar-container {
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
